@@ -45,9 +45,9 @@ function reset() {
     min = 0;
     second = 0;
     milisec = 0;
-    getmin.innerHTML = min;
-    getms.innerHTML = milisec;
-    gets.innerHTML = second;
+    getmin.innerHTML=`00`
+    getms.innerHTML = `00`
+    gets.innerHTML = `00`
 }
 
 //for timer js start from here
@@ -77,4 +77,10 @@ function stopTimer() {
     var startBtnTimer = document.getElementById("starttimer");
     startBtnTimer.disabled = false;
     startBtnTimer.style.backgroundColor = "#1A73E8"
+}
+
+function resetTimer() {
+    var sec = 0;
+    var min = 0;
+    timerElements.innerHTML = `00:00`
 }
