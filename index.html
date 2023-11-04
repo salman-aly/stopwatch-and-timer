@@ -7,29 +7,48 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="main-container">
-      <div class="container">
-        <div class="timer">
-          <h6>Stopwatch</h6>
-        </div>
-        <!-- <div class="stopwatch">
-          <h6>stopwatch</h6>
-        </div> -->
-        <!-- <hr> -->
-      </div>
-      <div class="values">
-        <div>
-          <div id="js-values">
-            <p id="hour">0<span>h</span></p>
-            <p id="min">0<span>m</span></p>
-            <p id="sec">0<span>s</span></p>
+    <div class="top-main-container">
+      <div class="main-container">
+        <div class="container">
+          <div class="stopwatch">
+            <h6>Stopwatch</h6>
           </div>
         </div>
+        <div class="values">
+          <div>
+            <div id="js-values">
+              <p id="hour">0<span>h</span></p>
+              <p id="min">0<span>m</span></p>
+              <p id="sec">0<span>s</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="start">
+          <button class="strt" id="start" onclick="start()">Start</button>
+          <button class="reset" onclick="stop()">Stop</button>
+          <button class="reset" onclick="reset()">Reset</button>
+        </div>
       </div>
-      <div class="start">
-        <button class="strt" id="start" onclick="start()">Start</button>
-        <button class="reset" onclick="stop()">Stop</button>
-        <button class="reset" onclick="reset()">Reset</button>
+      <div class="timer">
+        <div class="container">
+          <div class="stopwatch">
+            <h6>Timer</h6>
+          </div>
+        </div>
+        <div class="values">
+          <div>
+            <div id="js-values">
+              <!-- <p id="hour">0<span>h</span></p> -->
+              <p id="timer">00:00<span></span></p>
+              <!-- <p id="sec">00<span></span></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="start">
+          <button class="strt" id="starttimer" onclick="startTimer()">Start</button>
+          <button class="reset" onclick="stopTimer()">Pause</button>
+          <button class="reset" onclick="resetTimer()">Reset</button>
+        </div>
       </div>
     </div>
 

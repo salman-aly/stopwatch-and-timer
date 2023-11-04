@@ -1,3 +1,4 @@
+//for stopwatch
 //for js value
 var min = 0;
 var second = 0;
@@ -34,7 +35,7 @@ function start() {
 
 //for stop
 function stop() {
-    clearInterval(interval)
+    clearInterval(interval);
     var startBtn = document.getElementById("start");
     startBtn.disabled = false;
     startBtn.style.backgroundColor = "#1A73E8"
@@ -47,4 +48,34 @@ function reset() {
     getmin.innerHTML = min;
     getms.innerHTML = milisec;
     gets.innerHTML = second;
+}
+
+//for timer js start from here
+
+var sec = 0;
+var min = 0;
+var timer;
+
+function startTimer() {
+    var timerElements = document.getElementById("timer");
+
+    timer = setInterval(() => {
+        timerElements.innerHTML = `${min}:${sec}`
+        sec++;
+        if (sec >= 60) {
+            sec = 0;
+            min++;
+        }
+    }, 60);
+    var startBtnTimer = document.getElementById("starttimer");
+    startBtnTimer.disabled = true;
+    startBtnTimer.style.backgroundColor = "#DEDDDE"
+}
+
+
+function stopTimer() {
+    clearInterval(timer);
+    var startBtn = document.getElementById("start");
+    startBtn.disabled = false;
+    startBtn.style.backgroundColor = "#1A73E8"
 }

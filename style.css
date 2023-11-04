@@ -1,4 +1,8 @@
-.main-container{
+.top-main-container {
+    display: flex;
+}
+
+.main-container {
     /* height: 100vh; */
     display: flex;
     justify-content: center;
@@ -6,7 +10,7 @@
     flex-direction: column;
     /* border: 1px solid black; */
     border-radius: 10px;
-    height: 400px;
+    height: 410px;
     width: 400px;
     margin: 100px auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -15,20 +19,23 @@
 /* .container{
    
 } */
-.container h6{
-    font-size: 22px;
+.container h6 {
+    font-size: 29px;
 }
 
-.container{
+/* .stopwatch h6{
+    font-size: 28px;
+} */
+.container {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     gap: 120px;
     margin-top: -40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
-.values #js-values{
+.values #js-values {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,12 +45,12 @@
     padding-bottom: 80px;
 }
 
-.start button{
+.start button {
     width: 70px;
     height: 30px;
 }
 
-.start .strt{
+.start .strt {
     background-color: #1A73E8;
     border: none;
     border-radius: 2px;
@@ -51,10 +58,24 @@
     cursor: pointer;
 }
 
-.start .reset{
+.start .reset {
     color: #1A73E8;
     background-color: transparent;
     border-radius: 3px;
     border: 1px solid black;
     cursor: pointer;
+}
+
+.timer {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    height: 410px;
+    width: 400px;
+    margin: 100px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
