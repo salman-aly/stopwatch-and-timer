@@ -21,7 +21,7 @@ function start() {
             gets.innerHTML = second;
             milisec = 0;
         }
-        else if (second >= 5) {
+        else if (second >= 60) {
             min++;
             getmin.innerHTML = min;
             second = 0;
@@ -53,18 +53,17 @@ function reset() {
 //for timer js start from here
 
 var sec = 0;
-var min = 0;
+var min = 5;
 var timer;
+var timerElements = document.getElementById("timer");
 
 function startTimer() {
-    var timerElements = document.getElementById("timer");
-
     timer = setInterval(() => {
         timerElements.innerHTML = `${min}:${sec}`
         sec++;
         if (sec >= 60) {
             sec = 0;
-            min++;
+            min--;
         }
     }, 60);
     var startBtnTimer = document.getElementById("starttimer");
@@ -75,7 +74,7 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timer);
-    var startBtn = document.getElementById("start");
-    startBtn.disabled = false;
-    startBtn.style.backgroundColor = "#1A73E8"
+    var startBtnTimer = document.getElementById("starttimer");
+    startBtnTimer.disabled = false;
+    startBtnTimer.style.backgroundColor = "#1A73E8"
 }
