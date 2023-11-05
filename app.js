@@ -11,8 +11,25 @@ var getmin = document.getElementById("hour");
 var gets = document.getElementById("min");
 var getms = document.getElementById("sec");
 
+//hide timer when stopwatch start
+var timerHidden = document.getElementById("timer-hidden");
+//hide stopwatch when timer start
+var stopwatchHidden = document.getElementById("stopwatch-hidden");
+
+
+
+//request fullscreen
+
+var fullscreen = document.getElementById("fullscreen");
+
+fullscreen.addEventListener('click', function () {
+    this.requestFullscreen()
+});
+
 //for start 
 function start() {
+    // element.requestFullscreen()
+    timerHidden.style.display = "none"
     interval = setInterval(function () {
         milisec++;
         getms.innerHTML = milisec;
@@ -42,10 +59,11 @@ function stop() {
 }
 //for reset
 function reset() {
+    timerHidden.style.display = "flex"
     min = 0;
     second = 0;
     milisec = 0;
-    getmin.innerHTML=`00`
+    getmin.innerHTML = `00`
     getms.innerHTML = `00`
     gets.innerHTML = `00`
 }
@@ -58,6 +76,7 @@ var timer;
 var timerElements = document.getElementById("timer");
 
 function startTimer() {
+    stopwatchHidden.style.display = "none"
     timer = setInterval(() => {
         timerElements.innerHTML = `${min}:${sec}`
         sec++;
@@ -80,6 +99,7 @@ function stopTimer() {
 }
 
 function resetTimer() {
+    stopwatchHidden.style.display = "flex"
     var sec = 0;
     var min = 0;
     timerElements.innerHTML = `00:00`

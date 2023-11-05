@@ -1,5 +1,6 @@
 .top-main-container {
     display: flex;
+    height: 570px !important;
 }
 
 .main-container {
@@ -16,16 +17,11 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/* .container{
-   
-} */
+
 .container h6 {
     font-size: 29px;
 }
 
-/* .stopwatch h6{
-    font-size: 28px;
-} */
 .container {
     display: flex;
     justify-content: space-around;
@@ -78,4 +74,8 @@
     width: 400px;
     margin: 100px auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bx-icon{
+    margin: 0 auto !important;
 }
