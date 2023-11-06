@@ -60,6 +60,7 @@ function stop() {
 //for reset
 function reset() {
     timerHidden.style.display = "flex"
+    location.reload()
     min = 0;
     second = 0;
     milisec = 0;
