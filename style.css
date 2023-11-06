@@ -18,9 +18,21 @@
 }
 
 
-.container h6 {
+.stopwatch h6 {
     font-size: 29px;
 }
+
+/* .stopwatch h6 ::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    border-radius: 3px;
+    background: #000000;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
 
 .container {
     display: flex;
@@ -76,6 +88,6 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.bx-icon{
+.bx-icon {
     margin: 0 auto !important;
 }
