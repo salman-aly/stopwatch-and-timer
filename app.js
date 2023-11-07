@@ -1,6 +1,6 @@
 //for stopwatch
 //for js value
-var min = 0;
+var stopwatchMin = 0;
 var second = 0;
 var milisec = 0;
 //for clear the interval
@@ -32,8 +32,8 @@ function start() {
             milisec = 0;
         }
         else if (second >= 60) {
-            min++;
-            getmin.innerHTML = min;
+            stopwatchMin++;
+            getmin.innerHTML = stopwatchMin;
             second = 0;
         }
 
@@ -66,9 +66,11 @@ function reset() {
 //for timer js start from here
 
 var sec = 59;
-var min = 20;
+var min = 5;
 var timer;
 var timerElements = document.getElementById("timer");
+
+//start timer
 
 function startTimer() {
     fullscreen()
@@ -80,12 +82,13 @@ function startTimer() {
             sec = 59;
             min--;
         }
-    }, 10);
+    }, 1000);
     var startBtnTimer = document.getElementById("starttimer");
     startBtnTimer.disabled = true;
     startBtnTimer.style.backgroundColor = "#DEDDDE"
 }
 
+//stop timer
 
 function stopTimer() {
     clearInterval(timer);
@@ -94,27 +97,23 @@ function stopTimer() {
     startBtnTimer.style.backgroundColor = "#1A73E8"
 }
 
+
+//reset timer
 function resetTimer() {
     exit()
-    stopwatchHidden.style.display = "flex"
     var sec = 0;
     var min = 0;
+    stopwatchHidden.style.display = "flex"
     timerElements.innerHTML = `00:00`
 }
 
-//request fullscreen
-
-// var fullscreen = document.getElementById("fullscreen");
-
-// fullscreen.addEventListener('click', function () {
-//     document.documentElement.requestFullscreen()
-// });
-
+//full screen request
 
 function fullscreen() {
     document.documentElement.requestFullscreen()
 }
 
+//exit full screen request
 function exit() {
     document.exitFullscreen()
 }
